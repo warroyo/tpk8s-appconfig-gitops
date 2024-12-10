@@ -8,4 +8,6 @@ stringData:
     []
     FRUIT=apple
     LINUX=alma
+    COLOR=green
     CAR=tata
+    SAMPLE=true
