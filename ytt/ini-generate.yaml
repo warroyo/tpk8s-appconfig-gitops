@@ -1,0 +1,17 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:struct", "struct")
+
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: config-ini
+type: opaque
+stringData:
+  #@yaml/text-templated-strings
+  INI_FILE: |
+    []
+    (@ for key in data.values: -@)
+    (@= key @)=(@= data.values[key] @)
+    (@ end -@)

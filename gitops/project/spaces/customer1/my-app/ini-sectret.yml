@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: config-ini
+type: opaque
+stringData:
+  INI_FILE: |
+    []
+    FRUIT=apple
+    LINUX=alma
+    CAR=tata
