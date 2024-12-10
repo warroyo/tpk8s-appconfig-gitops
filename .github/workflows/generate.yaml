@@ -8,7 +8,7 @@ on:
       - configs/**
 
 jobs:
-  gitops-deploy:
+  generate-ini:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
