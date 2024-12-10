@@ -8,4 +8,5 @@ stringData:
     []
     FRUIT=apple
     LINUX=rhel
+    COLOR=green
     CAR=honda
