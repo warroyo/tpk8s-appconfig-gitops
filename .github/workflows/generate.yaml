@@ -29,4 +29,8 @@ jobs:
           commit_message: push application deployment to dev
           commit_user_name: github_action
           create_branch: true
-          repository: .  
+          repository: .
+      - name: create pull request
+        run: gh pr create --repo ${{github.repository}} -B main -H dev-${{steps.date.outputs.date}} --title 'config update' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
