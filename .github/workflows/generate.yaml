@@ -31,6 +31,6 @@ jobs:
           create_branch: true
           repository: .
       - name: create pull request
-        run: gh pr create --repo ${{github.repository}} -B main -H dev-${{steps.date.outputs.date}} --title 'config update' --body 'Created by Github action'
+        run: gh pr create --repo ${{github.repository}} -B main -H config-update-${{steps.date.outputs.date}} --title 'config update' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
